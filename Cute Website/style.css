@@ -1,0 +1,120 @@
+body {
+  background: linear-gradient(to right, #ffd6e7, #ffeaf1);
+  font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  width: 330px;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+  animation: fadeIn 1.3s ease;
+}
+
+h1 {
+  color: #ff4f87;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #999;
+}
+
+button {
+  background: #ff87ab;
+  border: none;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #ff5f95;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #444;
+}
+
+#hugImage {
+  width: 160px;
+  margin-top: 10px;
+  display: none;
+  border-radius: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Floating Hearts Animation */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 5s linear forwards;
+  color: #ff87ab;
+}
+
+/* Cute background hearts pattern */
+body::before {
+  content: "🩷 💕 🤍 💖 🐱 🩷 💕 🤍 💖 🐱";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  opacity: 0.08;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  line-height: 2.5rem;
+  pointer-events: none;
+  z-index: 0;
+}
+.card {
+  position: relative;
+  z-index: 2;
+}
+
+
+.float {
+  position: fixed;
+  bottom: -40px;
+  font-size: 26px;
+  animation: floatUp linear forwards;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
